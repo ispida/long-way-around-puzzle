@@ -1,0 +1,7 @@
+{
+  "id": "bear",
+  "name": "Brown bear",
+  "extends": "default",
+  "words": {},
+  "order": 10
+}

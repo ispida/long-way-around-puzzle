@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "id": "lvl15",
+  "name": "Crossroads",
+  "tag": "Mixed",
+  "text": "Two {pot}s, two {hive|lower}s, {mud|lower} and {slope|lower}. Every {piece|lower} you place can change which {pot} is nearer.",
+  "map": [
+    ".T......<<<....",
+    ".T........T....",
+    "T.........T..1.",
+    "<<......T.T....",
+    "......Tmm.T....",
+    "......Tmm.T....",
+    "T....TT.TTH....",
+    "TQ<<<.T.T...1..",
+    "......T.T......",
+    "T.....TQ......H",
+    "B.............."
+  ],
+  "pieces": {
+    "hedge": 11
+  },
+  "rules": "default",
+  "modifiers": [],
+  "solution": {
+    "score": 67,
+    "proven": true,
+    "data": "b64:CXDVLxtRKfZyL3DVMxtRJPZyT3DVdBtRmfZyi3DVkRtR",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:f09a8cb3cd3ac4bdb9c3483df90fccc3e3b7f23e672be970d9a15cd7b7764b90"
+  }
+}

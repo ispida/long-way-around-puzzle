@@ -1,0 +1,29 @@
+{
+  "id": "burrow",
+  "chars": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  "walkable": true,
+  "cost": 1,
+  "nameKey": "burrow",
+  "behaviors": [
+    {
+      "type": "tunnel",
+      "pairBy": "char",
+      "cost": 1
+    }
+  ],
+  "editor": {
+    "group": "special",
+    "order": 10
+  },
+  "image": {
+    "tintBy": "char"
+  },
+  "card": {
+    "title": "{burrow}",
+    "text": "Two {burrow|lower} connected in 1 step.",
+    "example": {
+      "map": ["1..T...", "B..T..H", "...T..1", "......."],
+      "hedges": []
+    }
+  }
+}

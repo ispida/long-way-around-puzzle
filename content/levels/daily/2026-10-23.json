@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "2026-10-23",
+  "name": "Hayride",
+  "tag": "Slopes",
+  "text": "Two rows of {slope|lower}: one only goes up, one only goes down. Make the {animal} ride both.",
+  "map": [
+    ".......~...",
+    "......v..T.",
+    "......v..T.",
+    "......v..T.",
+    "^........T.",
+    "^~TTTTT....",
+    "^~.........",
+    "B.........H"
+  ],
+  "pieces": {
+    "hedge": 5
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 10,
+  "solution": {
+    "score": 34,
+    "proven": true,
+    "data": "b64:KnDVORXXK5F6utd6WjQb",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-20",
+    "engineVersion": 1,
+    "inputs": "sha256:1ae3e8a8fd75e9bd8a442cb8db90f5a4cb7745266b187a6256bed6c12e583932"
+  }
+}

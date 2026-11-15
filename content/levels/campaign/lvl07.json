@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "id": "lvl07",
+  "name": "Buzzing",
+  "tag": "Hives",
+  "text": "Walking through a {hive|lower} gets the {animal} chased by the {bonus}: +5 {units} saved. It walks up to 5 extra steps to stay away from the bees, so leave it no shorter way around.",
+  "map": [
+    "....TT.....",
+    "....Q......",
+    "....TT.....",
+    "B...TT.....",
+    "..........H",
+    "....TT.....",
+    "......Q....",
+    "....TT....."
+  ],
+  "pieces": {
+    "hedge": 6
+  },
+  "rules": "default",
+  "modifiers": [],
+  "solution": {
+    "score": 33,
+    "proven": true,
+    "data": "b64:MHDVPxtRLtewJHDVSxtRUtew",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:e1c0fcaa6656b2410782a3db2747adf53f47514b84d3f3991bd9047d36528438"
+  }
+}

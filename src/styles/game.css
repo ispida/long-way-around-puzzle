@@ -1,0 +1,749 @@
+/* Game UI: play screen, result, leaderboard, campaign grid, rulebook. Adapted from the prototype. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.muted,
+.hint {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.hint.warn {
+  color: var(--danger);
+}
+
+/* buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 9px 18px;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover {
+  border-color: var(--muted);
+}
+.btn.primary {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* labelled select */
+.picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.picker select {
+  font: inherit;
+  font-size: 0.82rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 4px 8px;
+  min-height: 30px;
+  cursor: pointer;
+}
+
+/* "Choose bear": a button with a small menu below it */
+.picker-menu {
+  position: relative;
+}
+/* plain text like the menu links; a click opens the menu */
+.picker-button {
+  font: inherit;
+  font-weight: 700;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+}
+.picker-button:hover,
+.picker-button[aria-expanded="true"] {
+  color: var(--ink);
+}
+.picker-list {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 100%;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.35);
+}
+/* on phones the header wraps and the button sits on the left */
+@media (max-width: 640px) {
+  .picker-list {
+    right: auto;
+    left: 0;
+  }
+}
+.picker-list[hidden] {
+  display: none;
+}
+.picker-list button {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  text-align: left;
+  cursor: pointer;
+}
+.picker-list button::before {
+  content: "✓";
+  width: 1em;
+  visibility: hidden;
+  color: var(--honey-text);
+}
+.picker-list button[aria-checked="true"]::before {
+  visibility: visible;
+}
+.picker-list button:hover,
+.picker-list button:focus-visible {
+  background: var(--bg);
+}
+
+/* level page: navigation, name, compact counters, large centred board, small buttons, result below */
+/* the level page fits the window: little space above the title, the board takes the rest (screen.ts) */
+main:has(> .level) {
+  padding-block: 8px 12px;
+}
+.level {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.level-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brief {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+.brief h1 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+/* wider screens: Previous / Next sit on the title's line instead of a row of their own */
+@media (min-width: 640px) {
+  .level {
+    position: relative;
+  }
+  .level-nav {
+    position: absolute;
+    inset: 0 0 auto;
+    pointer-events: none;
+  }
+  .level-nav > * {
+    pointer-events: auto;
+  }
+  .brief {
+    padding-inline: 140px;
+  }
+}
+.play {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-family: var(--f-mono);
+  font-variant-numeric: tabular-nums;
+}
+.pill .label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pill .sep {
+  color: var(--muted);
+}
+.pill .v {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+.pill.score .v {
+  color: var(--honey-text);
+}
+/* the counters above the board ("Score: 12", "Logs: 1/3") and "Optimal: 14" by the buttons */
+.hud .pill,
+.controls .pill {
+  gap: 0;
+  padding: 3px 12px;
+  font-size: 0.875rem;
+}
+.hud .pill .label,
+.controls .pill .label {
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.hud .pill .sep,
+.controls .pill .sep {
+  margin-right: 0.4em;
+}
+.hud .pill .v,
+.controls .pill .v {
+  font-size: inherit;
+}
+/* "Optimal: 14" next to the buttons: same size and corners as them, in a light honey yellow */
+.controls .pill.optimum {
+  min-height: 34px;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 8px;
+  background: var(--honey-soft);
+  border-color: var(--honey);
+  font-family: var(--f-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.controls .pill.optimum .label,
+.controls .pill.optimum .sep {
+  color: var(--honey-text);
+}
+.btn.small {
+  min-height: 34px;
+  padding: 5px 14px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+/* Room for a three-digit best, so a new best doesn't shift Submit and Clear. */
+.btn.best {
+  min-width: 6.5em;
+}
+.btn.disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.controls.center {
+  justify-content: center;
+}
+.board-frame {
+  position: relative;
+  max-width: 100%;
+  background: var(--board-frame);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.05),
+    0 10px 30px -18px rgba(20, 40, 10, 0.6);
+}
+@media (max-width: 480px) {
+  .board-frame {
+    padding: 4px;
+    border-radius: 10px;
+  }
+}
+.board-frame canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+/* speech bubble above the animal */
+.speech {
+  position: absolute;
+  z-index: 2;
+  max-width: 240px;
+  transform: translateY(-100%);
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #1f2619;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+.speech::after {
+  content: "";
+  position: absolute;
+  left: var(--tail, 50%);
+  bottom: -7px;
+  margin-left: -7px;
+  border: 7px solid transparent;
+  border-bottom: 0;
+  border-top-color: #ffffff;
+}
+.speech[hidden] {
+  display: none;
+}
+.speech.pop {
+  animation: speech-pop 180ms ease-out;
+}
+@keyframes speech-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-90%) scale(0.9);
+  }
+}
+
+.badge.small {
+  font-size: 0.68rem;
+  padding: 1px 8px;
+}
+
+/* leaderboard pop-up: a small card over a dimmed page */
+dialog.leaderboard {
+  width: min(460px, calc(100vw - 32px));
+  padding: 12px 14px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.5);
+}
+dialog.leaderboard::backdrop {
+  background: rgba(10, 14, 8, 0.45);
+}
+.leaderboard-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.leaderboard-head h2 {
+  font-family: var(--f-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+.leaderboard .close {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  font: inherit;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.leaderboard .close:hover {
+  color: var(--ink);
+  background: var(--bg);
+}
+
+/* histogram (leaderboard pop-up, "My stats") */
+.histogram {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.hist-plot {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  height: 140px;
+}
+.hist-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.hist-track {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  border-bottom: 1px solid var(--line);
+}
+.hist-n {
+  text-align: center;
+  font-family: var(--f-mono);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+}
+.hist-bar {
+  display: block;
+  max-width: 40px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 1px;
+  border-radius: 4px 4px 0 0;
+  background: var(--muted);
+  opacity: 0.55;
+}
+.hist-col.current .hist-bar {
+  background: var(--honey);
+  opacity: 1;
+}
+.hist-col.current .hist-n {
+  color: var(--honey-text);
+  font-weight: 700;
+}
+.hist-col:hover .hist-bar {
+  opacity: 0.85;
+}
+.hist-x {
+  padding-top: 4px;
+  text-align: center;
+  font-family: var(--f-mono);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hist-plot.dense .hist-n,
+.hist-plot.dense .hist-x {
+  font-size: 0.65rem;
+}
+.hist-plot.tiny .hist-n,
+.hist-plot.tiny .hist-x {
+  font-size: 0.55rem;
+}
+.hist-plot.tiny {
+  gap: 1px;
+}
+.hist-axes {
+  text-align: center;
+}
+
+/* campaign grid */
+.page.wide {
+  max-width: none;
+}
+.level-grid {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 14px;
+}
+.level-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.level-card .n {
+  font-family: var(--f-mono);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.level-card.coming,
+.level-card.locked {
+  background: transparent;
+  border-style: dashed;
+}
+.level-card.coming .state,
+.level-card.locked .state {
+  color: var(--muted);
+}
+.level-link {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+a.level-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+}
+a.level-link:focus-visible {
+  outline: none;
+}
+.level-card:has(a.level-link:focus-visible) {
+  outline: 3px solid var(--honey);
+  outline-offset: 2px;
+}
+.level-card:has(a.level-link):hover {
+  border-color: var(--muted);
+}
+.level-card .name {
+  font-weight: 700;
+}
+.level-card .state {
+  font-family: var(--f-mono);
+  font-size: 0.8rem;
+  color: var(--honey-text);
+}
+/* every tile has the same picture area, whatever the board's shape (or no board yet) */
+.level-card .thumb {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--board-frame);
+}
+.level-card .thumb canvas.mini {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+}
+.level-card .name {
+  min-height: 1.5em;
+}
+.veil {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--bg) 85%, transparent),
+    color-mix(in srgb, var(--bg) 40%, transparent)
+  );
+  font-family: var(--f-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+canvas.mini {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: var(--board-frame);
+}
+
+/* rulebook */
+.rules-page {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  align-items: start;
+  gap: 18px;
+}
+/* all rulebook boards are 4 × 7 tiles, so every picture has the same size */
+.card canvas.mini {
+  aspect-ratio: 7 / 4;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.card h3 {
+  font-size: 1.15rem;
+}
+.card p {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* "My stats": four figures in one row (2 × 2 on phones), the histogram, the table */
+.page.stats {
+  max-width: 760px;
+}
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+  gap: 8px;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .stat-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.stat {
+  display: flex;
+  gap: 0.35em;
+  align-items: baseline;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+.stat dt {
+  color: var(--muted);
+}
+.stat dd {
+  margin: 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.stats-hist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 360px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.stats-hist h2 {
+  font-family: var(--f-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+.stats-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+.stats-table th,
+.stats-table td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line);
+}
+.stats-table th {
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* "The bees are saving honey…" under the buttons while the animal walks */
+.walk-line {
+  margin: 0;
+  color: var(--honey-text);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+/* hidden by visibility, so the page doesn't change height (and scroll) when the walk starts */
+.walk-line:not(.on) {
+  visibility: hidden;
+}
+
+/* legal pages */
+.legal h2 {
+  font-size: 1.25rem;
+  margin-top: 12px;
+}
+.legal address {
+  font-style: normal;
+}
+
+/* Scores pop-up */
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+.hud .pill.clickable {
+  cursor: pointer;
+}
+.hud .pill.clickable:hover {
+  border-color: var(--muted);
+}
+.leaderboard-note {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.total-me {
+  font-weight: 700;
+}
+
+/* first-visit "How to play" pop-up (looks like the leaderboard pop-up) */
+dialog.intro p,
+dialog.intro ol {
+  margin: 0 0 10px;
+  line-height: 1.45;
+}
+dialog.intro ol {
+  padding-left: 1.3em;
+}
+dialog.intro li + li {
+  margin-top: 4px;
+}

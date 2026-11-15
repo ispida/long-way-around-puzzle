@@ -1,0 +1,29 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2023", "DOM"],
+    "types": ["node", "vite/client"],
+    "allowJs": true,
+    "paths": {
+      "@shared/*": ["../src/shared/*"],
+      "@engine/*": ["../src/engine/*"],
+      "@app/*": ["../src/app/*"],
+      "@themes/*": ["../src/themes/*"],
+      "@render/*": ["../src/render/*"],
+      "@ui/*": ["../src/ui/*"],
+      "@play/*": ["../src/play/*"],
+      "@pages/*": ["../src/pages/*"],
+      "@storage/*": ["../src/storage/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "../tests/**/*.ts",
+    "../*.config.ts",
+    "../vite.shared.ts",
+    "../vite.fonts.ts",
+    "../eslint.config.js",
+    "../src/shared/**/*.ts",
+    "../src/engine/**/*.ts"
+  ]
+}

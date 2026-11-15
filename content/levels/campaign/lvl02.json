@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "lvl02",
+  "name": "Zigzag",
+  "tag": "Corridors",
+  "text": "Rows of trees, each with gaps. Close the right gaps with your {pieces} and the {animal} has to zigzag through every row.",
+  "map": ["B.........", "TTT.TTTT..", "..........", "..TTTT.TTT", "..........", "TTT.TTTT..", ".........H"],
+  "pieces": {
+    "hedge": 4
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 15,
+  "solution": {
+    "score": 33,
+    "proven": true,
+    "data": "b64:FnDVHxtRBNcVP3DV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-06",
+    "engineVersion": 1,
+    "inputs": "sha256:ee60ef24425bb09bae519e87a080de02b240b375423feee2d48714e263e2ad11"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "2026-10-11",
+  "name": "Falling Leaves",
+  "tag": "Autumn",
+  "text": "A short walk through the autumn wood. Only 3 {pieces}, but plenty of places to put them: find the spots that send the {animal} the long way round.",
+  "map": [".........", ".TTTTT...", "...T.....", "....T....", ".T...T..H", "B.T.....~", ".......~~"],
+  "pieces": {
+    "hedge": 3
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 11,
+  "solution": {
+    "score": 27,
+    "proven": true,
+    "data": "b64:AHDVPRXXJpF6",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:258b2b60bbce4bc5368587643f0491003adae9da413b3e1336f36def2c0c96db"
+  }
+}

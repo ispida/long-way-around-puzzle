@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "id": "lvl06",
+  "name": "Two pots",
+  "tag": "Multi-goal",
+  "text": "The {food|lower} is in two places, and the {animal} heads for whichever {pot} is closer. Make one way longer and it simply takes the other, so lengthen both.",
+  "map": [
+    "....H......",
+    "...........",
+    ".TTTT.TTTT.",
+    "...........",
+    "B..........",
+    "...........",
+    ".TTTT.TTTT.",
+    "..........H"
+  ],
+  "pieces": {
+    "hedge": 6
+  },
+  "rules": "default",
+  "modifiers": [],
+  "solution": {
+    "score": 26,
+    "proven": true,
+    "data": "b64:AHDVLBtRNteRInDVQRtRT9eR",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-06",
+    "engineVersion": 1,
+    "inputs": "sha256:eb7765568e16be27eaaca8a4c3e7b4d11678cac5a2986905a9b7b5e5ce959616"
+  }
+}

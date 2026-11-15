@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "id": "lvl07",
+  "name": "Downhill",
+  "tag": "One-way",
+  "text": "{slope} only work in the direction of the arrow. Two one-way gates lead into the walled garden. You can't place a {piece|lower} on them, but you can block the tile behind one.",
+  "map": [
+    "...........",
+    ".TTTTvTTTT.",
+    ".T.......T.",
+    ".T..H....T.",
+    ".T.......T.",
+    ".TTTT^TTTT.",
+    "B.........."
+  ],
+  "pieces": {
+    "hedge": 4
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 9,
+  "solution": {
+    "score": 31,
+    "proven": true,
+    "data": "b64:AHDVKxtRX9ew",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-05",
+    "engineVersion": 1,
+    "inputs": "sha256:247d20bf8173b063e8f8e08c2e8e82dd277ffba519a1e72734e15da82b9fdbc7"
+  }
+}

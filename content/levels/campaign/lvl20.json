@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "id": "lvl20",
+  "name": "The long way home",
+  "tag": "Finale",
+  "text": "Everything at once: two {pot}s, two {hive|lower}s, {mud|lower}, portals and {slope|lower}. Find the longest way round.",
+  "map": [
+    "B..mmm.T........",
+    ".T.mmmTTH.......",
+    ".T.mmm..........",
+    ".T2..T.TTT2TT.>>",
+    ".T....Q...^...T.",
+    ".T.^......^....H",
+    ".T.^TTTTTT^.T.T.",
+    "...^......Q.mm1.",
+    ".T..........mm1.",
+    ".T.....~........",
+    ".TTTTT~T~TTT....",
+    "................"
+  ],
+  "pieces": {
+    "hedge": 13
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 10,
+  "solution": {
+    "score": 78,
+    "proven": true,
+    "data": "b64:CXDVLxtRPBXXMXDVPhtRLxXXS3DVUBtRZBXXmXDVkBtRhRXXt3DV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:9be8a8672f880a1ecc5fa271e542f4fe5318f46f54e2abd6907bc6d789a7a649"
+  }
+}

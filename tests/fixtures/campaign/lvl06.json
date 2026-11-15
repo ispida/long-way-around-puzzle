@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "lvl06",
+  "name": "Chase scene",
+  "tag": "Chasers",
+  "text": "Walking through a {hive|lower} gets the {animal} chased by the {bonus}, and the lost time saves 5 more {units}. It only goes through a {hive|lower} when no equally short route avoids it, so you have to force it.",
+  "map": ["B....T.....", ".....T.....", "........Q..", ".....T.....", ".....T....H", ".....Q....."],
+  "pieces": {
+    "hedge": 4
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 14,
+  "solution": {
+    "score": 27,
+    "proven": true,
+    "data": "b64:AXDVJxtRLteRW3DV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:652c484f2ff1f384e504bda2f24cf066da24547ec975972a46c1f13d0a9437ea"
+  }
+}

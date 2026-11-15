@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+# Newer pushes cancel older runs.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  web:
+    name: Web (lint, types, unit tests, content, build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Audit runtime dependencies
+        run: npm audit --omit=dev --audit-level=moderate
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run validate
+      - run: npm run build
+
+  e2e:
+    name: E2E (Playwright, Chromium)
+    runs-on: ubuntu-latest
+    # A full run takes about 3 minutes; a hang fails fast instead of after GitHub's 6 hours.
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # Without --with-deps: the runner image already has Chromium's system libraries (it ships Google
+      # Chrome), and apt mirrors that don't answer used to hang this step.
+      - run: npx playwright install chromium
+        timeout-minutes: 5
+      # Built with the fixed test levels, not the real campaign.
+      - run: npm run build:e2e
+      - run: npm run test:e2e
+      - if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
+  solver:
+    name: Solver (ruff, pytest, cross-check with the engine)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: solver/uv.lock
+      # node_modules lets the solver tests call the TypeScript engine (tools/engine-cli.ts).
+      - run: npm ci
+      - run: uv sync --locked
+        working-directory: solver
+      - run: uv run ruff check && uv run ruff format --check
+        working-directory: solver
+      - run: uv run pytest
+        working-directory: solver
+      - name: Solver = brute force on 300 random boards
+        run: npm run solve:verify
+      - name: npm run solve round trip (writes, re-scores, validates)
+        run: npx vitest run tools/solve.test.ts

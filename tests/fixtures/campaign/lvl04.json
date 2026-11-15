@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "id": "lvl04",
+  "name": "Shortcut",
+  "tag": "Portals",
+  "text": "Two portals are linked, a shortcut the {guardians} can't block: going from one portal to the other costs the {animal} just 1 step. You can't place a {piece|lower} on a portal, but you can surround one.",
+  "map": [
+    "B....T....H",
+    ".....T.....",
+    "..1..T.....",
+    ".....T.....",
+    ".....T..1..",
+    ".....T.....",
+    "..........."
+  ],
+  "pieces": {
+    "hedge": 5
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 11,
+  "solution": {
+    "score": 22,
+    "proven": true,
+    "data": "b64:FnDVGhtRAtdTOHDVIhtR",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-05",
+    "engineVersion": 1,
+    "inputs": "sha256:337694e5a194baba40b97d60411a43628a6d6b71a1ce29334bf358fedb325e30"
+  }
+}

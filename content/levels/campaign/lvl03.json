@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "lvl03",
+  "name": "Two gates",
+  "tag": "Never trap",
+  "text": "The {food|lower} sits in a fenced garden with two gates. Close one and the {animal} takes the other; close both and it would be trapped, so the game won't let you. Make the way to the open gate as long as you can.",
+  "map": [
+    "...........",
+    "..TTTT.TTT.",
+    "..T......T.",
+    "B.T..H...T.",
+    "..T......T.",
+    "..TTTT.TTT.",
+    "...........",
+    "..........."
+  ],
+  "pieces": {
+    "hedge": 5
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 13,
+  "solution": {
+    "score": 35,
+    "proven": true,
+    "data": "b64:GHDVFhtRPNc0M3DVRRtR",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-06",
+    "engineVersion": 1,
+    "inputs": "sha256:a44e2593996d05a7a8f83774ab75ce0913d370cfda53cebd561f8b1f123e8188"
+  }
+}

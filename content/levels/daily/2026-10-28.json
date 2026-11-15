@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "2026-10-28",
+  "name": "Rabbit Holes",
+  "tag": "Portals",
+  "text": "Two pairs of {burrow|lower}. A hop through one takes a single step: decide which shortcuts the {animal} may keep.",
+  "map": [
+    "B.1........",
+    "...T....TT.",
+    "...T....1.H",
+    "...T.......",
+    "...TTTTT...",
+    "...T.......",
+    "...T.......",
+    "...T.......",
+    "...2......2"
+  ],
+  "pieces": {
+    "hedge": 6
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 5,
+  "solution": {
+    "score": 31,
+    "proven": true,
+    "data": "b64:GnDVABXXBJF65Nd6Cs8bW9UN",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-20",
+    "engineVersion": 1,
+    "inputs": "sha256:c2834a21dbd22bb8e5ba791583d7198e00cce55e94a566b5d6ded69677ab49e7"
+  }
+}

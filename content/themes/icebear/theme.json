@@ -1,0 +1,31 @@
+{
+  "id": "icebear",
+  "name": "Ice bear",
+  "extends": "default",
+  "order": 30,
+  "words": {
+    "animal": "ice bear",
+    "Animal": "Ice bear",
+    "food": "fish",
+    "Food": "Fish",
+    "pot": "fish bucket",
+    "unit": "fish",
+    "units": "fish",
+    "guardians": "puffins",
+    "Guardians": "Puffins",
+    "piece": "ice wall",
+    "pieces": "ice walls",
+    "Piece": "Ice wall",
+    "bonus": "walruses",
+    "hive": "Walrus colony",
+    "mud": "Deep snow",
+    "burrow": "Portals",
+    "slope": "Ice slides",
+    "tree": "Iceberg",
+    "water": "Sea"
+  },
+  "palette": {
+    "boardFrame": "#4a7fa3",
+    "path": "#2c4a6e"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "hedge",
+  "effect": {
+    "type": "block"
+  },
+  "editor": {
+    "order": 10
+  }
+}

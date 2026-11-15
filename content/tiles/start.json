@@ -1,0 +1,15 @@
+{
+  "id": "start",
+  "chars": ["B"],
+  "walkable": true,
+  "cost": 1,
+  "role": "start",
+  "nameKey": "animal",
+  "editor": {
+    "group": "actor",
+    "order": 10
+  },
+  "image": {
+    "base": "grass"
+  }
+}

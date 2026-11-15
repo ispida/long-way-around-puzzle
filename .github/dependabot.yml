@@ -1,0 +1,38 @@
+# Dependency updates: weekly, grouped into one PR per ecosystem so they
+# arrive as a few small PRs that CI checks, instead of piling up.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      runtime:
+        dependency-type: production
+      dev-tools:
+        dependency-type: development
+        update-types: [minor, patch]
+    ignore:
+      # Node major versions follow the LTS plan (.nvmrc), not Dependabot.
+      - dependency-name: "@types/node"
+        update-types: [version-update:semver-major]
+
+  - package-ecosystem: uv
+    directory: /solver
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      solver:
+        patterns: ["*"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      actions:
+        patterns: ["*"]

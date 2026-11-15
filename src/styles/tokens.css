@@ -1,0 +1,57 @@
+/* Design tokens from the prototype. Light by default, dark via
+   prefers-color-scheme, and an explicit override with <html data-theme="light|dark">. */
+:root {
+  --bg: #eef1e6;
+  --surface: #f9faf4;
+  --ink: #1f2619;
+  --muted: #5d6852;
+  --line: #d3dac4;
+  --honey: #c47f00;
+  --honey-soft: #f6e2b0;
+  /* honey for small text: meets 4.5:1 on all light backgrounds */
+  --honey-text: #85570a;
+  --leaf: #2f6b2f;
+  --danger: #b8402b;
+  --danger-soft: #f6d9d2;
+  --ok: #24602d;
+  --ok-soft: #d8ecd5;
+  --board-frame: #5d8f3e;
+  --f-display: "Bagel Fat One", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --f-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "DM Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12170f;
+    --surface: #1b2217;
+    --ink: #e8eddd;
+    --muted: #a1ad92;
+    --line: #2f3a28;
+    --honey: #f0b232;
+    --honey-soft: #3d2f10;
+    --honey-text: #f0b232;
+    --leaf: #7fbf6a;
+    --danger: #f08a73;
+    --danger-soft: #3d1d16;
+    --ok: #8fd18a;
+    --ok-soft: #1d3320;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12170f;
+  --surface: #1b2217;
+  --ink: #e8eddd;
+  --muted: #a1ad92;
+  --line: #2f3a28;
+  --honey: #f0b232;
+  --honey-soft: #3d2f10;
+  --honey-text: #f0b232;
+  --leaf: #7fbf6a;
+  --danger: #f08a73;
+  --danger-soft: #3d1d16;
+  --ok: #8fd18a;
+  --ok-soft: #1d3320;
+  color-scheme: dark;
+}

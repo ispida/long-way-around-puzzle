@@ -1,0 +1,7 @@
+{
+  "id": "default",
+  "onCutOff": "zero",
+  "goal": "nearest",
+  "animals": 1,
+  "score": "single"
+}

@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "id": "2026-10-29",
+  "name": "Foggy Hollow",
+  "tag": "Mixed",
+  "text": "{mud|cap}, {slope|lower} and a pair of {burrow|lower} in the autumn fog. 7 {pieces}, one clever layout.",
+  "map": [
+    "......~......",
+    "..T.~~.......",
+    "mmT.........H",
+    ".1.T.....T...",
+    "B.TTTTTTTTT1.",
+    "........vT...",
+    "........vT...",
+    "..........T..",
+    ".....>>>>....",
+    "............."
+  ],
+  "pieces": {
+    "hedge": 7
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 6,
+  "solution": {
+    "score": 48,
+    "proven": true,
+    "data": "b64:FXDVKRXXMJF60dd6Ju4bRdUNZtcV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-20",
+    "engineVersion": 1,
+    "inputs": "sha256:133b852fc2f881c00b382dd55357e8ad22decbb35c4bacefeceff69cdbe11e5d"
+  }
+}

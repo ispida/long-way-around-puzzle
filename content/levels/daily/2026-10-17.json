@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "2026-10-17",
+  "name": "Puddles",
+  "tag": "Maze",
+  "text": "Rain puddles and rows of trees make a tight maze. Every {piece|lower} counts.",
+  "map": [
+    ".........",
+    ".......T.",
+    "....~.T..",
+    ".TT~TTT..",
+    "...T.....",
+    "...T.....",
+    "...T..T.H",
+    ".....T.T.",
+    "B........"
+  ],
+  "pieces": {
+    "hedge": 6
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 10,
+  "solution": {
+    "score": 38,
+    "proven": true,
+    "data": "b64:NXDVORXXIJF6wNd6tLAbOtUN",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:b69118a7f3526750257e6297963995c74abac17a023ef870f320bd1667bcc0a5"
+  }
+}

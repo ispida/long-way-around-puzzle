@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "id": "2026-10-19",
+  "name": "Chestnut Grove",
+  "tag": "Autumn",
+  "text": "Open ground and only 3 {pieces}. Where do they make the biggest difference?",
+  "map": [
+    "...........",
+    ".~.~.......",
+    "..~........",
+    "...T.......",
+    "...TTT.....",
+    "...T.T.....",
+    "B.........H"
+  ],
+  "pieces": {
+    "hedge": 3
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 10,
+  "solution": {
+    "score": 26,
+    "proven": true,
+    "data": "b64:N3DVIBXXUZF6",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:33e841048e5579008fd9219d265aef1871e1fb6aef9a7a614972fb88ac216a15"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "id": "2026-10-25",
+  "name": "Haunted Orchard",
+  "tag": "Mixed",
+  "text": "The longest walk of the week: {mud|lower}, {slope|lower}, a pair of {burrow|lower} and a {hive|lower} hidden among the trees. Only 7 {pieces} to make it count.",
+  "map": [
+    ".mmm.......TT.",
+    ".mmm.......T2.",
+    ".....T.T.1.T..",
+    ".TTTTTTTTT.T..",
+    "......TT..1T..",
+    ".......T...T..",
+    "B.TT.TTT...T.H",
+    ".......T...TT.",
+    ".......T<<<...",
+    "2..mmm.T......",
+    "...mmm.Q......"
+  ],
+  "pieces": {
+    "hedge": 7
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 10,
+  "solution": {
+    "score": 38,
+    "proven": true,
+    "data": "b64:UnDVXhXXdZF6lNd6dnIbF9UNYdcV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-20",
+    "engineVersion": 1,
+    "inputs": "sha256:50125d922f183523049ba15f7cb2c0a4bff4892d042b53d02c8f580bda640d31"
+  }
+}

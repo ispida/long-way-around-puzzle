@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "id": "lvl19",
+  "name": "Busy bees",
+  "tag": "Mixed",
+  "text": "Two {hive|lower}s, two pairs of portals and {slope|lower}. Force the {animal} past a {hive|lower} without opening a shortcut.",
+  "map": [
+    "...T............",
+    "................",
+    ".Q..............",
+    ".....TTTTT.TTTT.",
+    ".............1T.",
+    ".....TT.TT^T..T.",
+    "B......<<<^...T.",
+    ".2.TT.T.......T.",
+    ".1T.TTTTTTTTTTTH",
+    ".....Q......2...",
+    "....<<<........."
+  ],
+  "pieces": {
+    "hedge": 12
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 7,
+  "solution": {
+    "score": 57,
+    "proven": true,
+    "data": "b64:CnDVGBtROfbuOHDVJxtRK/buL3DVTBtRUPbuSnDVbxtRhPbu",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:25c552f48033e7bde51fd83e61a11db2c33059a3ce9d00d57b11f7ea646198c9"
+  }
+}

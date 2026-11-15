@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "lvl05",
+  "name": "Two stashes",
+  "tag": "Multi-goal",
+  "text": "The {food|lower} is stashed in two places, and the {animal} heads for whichever {pot} is closer. Making one route longer only helps until the other becomes the shorter one.",
+  "map": [
+    ".....H.....",
+    "...........",
+    "..TTTTTTT..",
+    ".....B.....",
+    "..TTTTTTT..",
+    "...........",
+    "...........",
+    ".....H....."
+  ],
+  "pieces": {
+    "hedge": 6
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 11,
+  "solution": {
+    "score": 25,
+    "proven": true,
+    "data": "b64:D3DVGBtROddyXHDVXBtRSNdy",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-05",
+    "engineVersion": 1,
+    "inputs": "sha256:20711329087e7e43b3de5615c2dfe0780dd553d5bdc018465881868b9c5ad799"
+  }
+}

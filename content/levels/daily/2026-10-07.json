@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "2026-10-07",
+  "name": "Muddy",
+  "tag": "Muddy",
+  "text": "",
+  "map": ["...........", "...mmmmm...", "B..mmmmm..H", "...mmmmm...", "...mmmmm...", "..........."],
+  "pieces": {
+    "hedge": 4
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 14,
+  "solution": {
+    "score": 24,
+    "proven": true,
+    "data": "b64:EHDVGhXXNpF6ytd6",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-05",
+    "engineVersion": 1,
+    "inputs": "sha256:12a641b5048fcea482c6773dc29930c5e85114e0924e9a00220b79c17edadc90"
+  }
+}

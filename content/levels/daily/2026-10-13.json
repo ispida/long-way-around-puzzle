@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "2026-10-13",
+  "name": "Fog Lane",
+  "tag": "Portals",
+  "text": "Thick fog over the lane, and two pairs of {burrow|lower}. A hop through one takes a single step: make sure the shortcut doesn't help the {animal}.",
+  "map": [
+    "2............",
+    "...........21",
+    ".............",
+    "...........TT",
+    "..TTTTTTTTTT.",
+    "..........~..",
+    "B.........~.H",
+    ".TTTTTTTT.~..",
+    "............1"
+  ],
+  "pieces": {
+    "hedge": 8
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 11,
+  "solution": {
+    "score": 44,
+    "proven": true,
+    "data": "b64:GnDVABXXPZF639d6tzQbP9UNctcV43r2",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:37422a3f45454810d04f50ca7f70d809037c98f6c6fd4784fa17361b8500e2e7"
+  }
+}

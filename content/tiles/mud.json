@@ -1,0 +1,23 @@
+{
+  "id": "mud",
+  "chars": ["m"],
+  "walkable": true,
+  "cost": 3,
+  "nameKey": "mud",
+  "editor": {
+    "group": "terrain",
+    "order": 20
+  },
+  "card": {
+    "title": "{mud}",
+    "text": "{mud} adds 3 steps.",
+    "example": {
+      "map": [".......", "B.mmm.H", ".......", "......."],
+      "hedges": [
+        [3, 0],
+        [3, 2],
+        [3, 3]
+      ]
+    }
+  }
+}

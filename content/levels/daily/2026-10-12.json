@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "2026-10-12",
+  "name": "Muddy Boots",
+  "tag": "Mud",
+  "text": "Autumn rain has turned the field to {mud|lower}. Each {mud|lower} tile takes the {animal} 3 steps, so lead it through the soft ground.",
+  "map": [
+    "....mmm....",
+    ".T.Tmmm....",
+    "mmT........",
+    "mm.T.......",
+    "mm.T.......",
+    ".......TT..",
+    "mm.........",
+    "Bm........H"
+  ],
+  "pieces": {
+    "hedge": 5
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 12,
+  "solution": {
+    "score": 44,
+    "proven": true,
+    "data": "b64:AXDVOhXXLJF6s9d6phUb",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:357b08e72ad86e1caa895f59101a680e8a161159d978796d3724648e65dc2c97"
+  }
+}

@@ -1,0 +1,7 @@
+dist/
+coverage/
+playwright-report/
+test-results/
+solver/
+package-lock.json
+tests/fixtures/prototype-engine.js

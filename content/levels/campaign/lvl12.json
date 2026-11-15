@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "lvl12",
+  "name": "Up and through",
+  "tag": "Mixed",
+  "text": "A portal and some {slope|lower}. The {animal} can't walk against the arrows, but a portal might take it where they point.",
+  "map": [
+    ".............",
+    ".............",
+    "...TTTTTvT1~~",
+    "....TT.Tv....",
+    "B...T..Tv....",
+    "..1..^.T.....",
+    ".....^.T..^.H",
+    "...TT^....^..",
+    "..........^.."
+  ],
+  "pieces": {
+    "hedge": 9
+  },
+  "rules": "default",
+  "modifiers": [],
+  "solution": {
+    "score": 46,
+    "proven": true,
+    "data": "b64:DnDVJBtRKvYVLnDVTBtRV/YVS3DVbhtRdfYV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-07",
+    "engineVersion": 1,
+    "inputs": "sha256:9957e462d204d234d291e03bc48902c670d4ef69a77c93204a78ccf8b758c556"
+  }
+}

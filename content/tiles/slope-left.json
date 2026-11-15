@@ -1,0 +1,29 @@
+{
+  "id": "slope-left",
+  "chars": ["<"],
+  "walkable": true,
+  "cost": 1,
+  "nameKey": "slope",
+  "behaviors": [
+    {
+      "type": "oneWay",
+      "dir": "left"
+    }
+  ],
+  "editor": {
+    "group": "special",
+    "order": 34
+  },
+  "image": {
+    "base": "slope",
+    "rotate": 180
+  },
+  "card": {
+    "title": "{slope}",
+    "text": "{slope} go one way only.",
+    "example": {
+      "map": [".......", "B..<..H", "...T...", "......."],
+      "hedges": []
+    }
+  }
+}

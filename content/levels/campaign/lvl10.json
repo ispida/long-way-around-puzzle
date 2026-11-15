@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "lvl10",
+  "name": "Slides",
+  "tag": "Mixed",
+  "text": "Two {pot}s and a few {slope|lower}. The arrows decide which {pot} the {animal} can reach first.",
+  "map": [
+    "...T.........",
+    ".TTT.........",
+    "..TT..~......",
+    ".TT..~.......",
+    ".TTT.....v..H",
+    "..TT.....v...",
+    "B.TT.>>>>H...",
+    ".........v...",
+    ">>....T......"
+  ],
+  "pieces": {
+    "hedge": 8
+  },
+  "rules": "default",
+  "modifiers": [],
+  "solution": {
+    "score": 45,
+    "proven": true,
+    "data": "b64:A3DVKRtRK/bXKHDVMhtRVvbXQ3DVUhtR",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-06",
+    "engineVersion": 1,
+    "inputs": "sha256:c6451b811e5b63615b6fb743cc1e515e733e3be32d1c88dcc80edffccb00f170"
+  }
+}

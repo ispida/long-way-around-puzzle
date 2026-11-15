@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "lvl11",
+  "name": "Sweet and sticky",
+  "tag": "Mixed",
+  "text": "Two {hive|lower}s and patches of {mud|lower}. The {animal} avoids both when it can; leave it no easy way past them.",
+  "map": [
+    "...m.........",
+    "B..mTTTTTTT..",
+    "..T........mm",
+    ".T..Q...TT...",
+    ".............",
+    ".T.TTT..T...H",
+    "..T.TTTT.....",
+    "..........mQm",
+    "..........mmm"
+  ],
+  "pieces": {
+    "hedge": 8
+  },
+  "rules": "default",
+  "modifiers": [],
+  "solution": {
+    "score": 64,
+    "proven": true,
+    "data": "b64:A3DVEBtRPPb2LHDVTRtRV/b2THDVVRtR",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:9a317d257369104953154b8fcf26496d9dad44179413a852d3685bbb0c359dfb"
+  }
+}

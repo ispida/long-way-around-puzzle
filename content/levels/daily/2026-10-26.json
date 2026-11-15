@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "2026-10-26",
+  "name": "Quiet Monday",
+  "tag": "Hives",
+  "text": "An easy start to the week: one {hive|lower} near the {pot}. Make going around it the only way.",
+  "map": [
+    ".........H",
+    "B.TTTT.T..",
+    ".......~~.",
+    "........~.",
+    "..........",
+    "......T...",
+    ".....T.Q..",
+    ".........."
+  ],
+  "pieces": {
+    "hedge": 5
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 10,
+  "solution": {
+    "score": 33,
+    "proven": true,
+    "data": "b64:HHDVGBXXC5F62dd6WJEb",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-20",
+    "engineVersion": 1,
+    "inputs": "sha256:f2a137e9a422280a5b36ef1ec9ae79da8a756eff32f16dc2da91057683de72df"
+  }
+}

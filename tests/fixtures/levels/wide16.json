@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "id": "wide16",
+  "name": "Wide board",
+  "tag": "Test",
+  "text": "A 16×15 board for the phone layout test.",
+  "map": [
+    "B...............",
+    "................",
+    ".....T..........",
+    ".....T....T.....",
+    ".....T....T.....",
+    ".....T....T.....",
+    ".....T....T.....",
+    ".....T....T.....",
+    ".....T....T.....",
+    ".....T....T.....",
+    ".....T....T.....",
+    ".....T....T.....",
+    ".....T....T.....",
+    "..........T.....",
+    "..........T....H"
+  ],
+  "pieces": {
+    "hedge": 2
+  },
+  "rules": "default",
+  "modifiers": [],
+  "solution": {
+    "score": 51,
+    "proven": true,
+    "data": "b64:HnDVGHC+",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-06",
+    "engineVersion": 1,
+    "inputs": "sha256:6956b797f25cf0f9b71c49ecd1506d5361d0f5e2e1a9ef29f7feac6584c4f271"
+  }
+}

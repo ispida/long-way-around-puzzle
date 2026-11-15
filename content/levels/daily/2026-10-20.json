@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "id": "2026-10-20",
+  "name": "First Frost",
+  "tag": "Finale",
+  "text": "The last walk before the frost: long rows of trees, a {hive|lower} on each side, {mud|lower}, {slope|lower} and {burrow|lower}. 12 {pieces}, and the best layout is hard to find.",
+  "map": [
+    "B..........T....",
+    ".T1TTTTT........",
+    "......T.........",
+    "......2........H",
+    ".QTTTTTTTTTTTTT.",
+    "................",
+    "...TTTT.TT2TT.T.",
+    "............Q.1.",
+    "..TTTTTTTTTTTT..",
+    ".<<<<...........",
+    ".mmm............",
+    "................"
+  ],
+  "pieces": {
+    "hedge": 12
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 9,
+  "solution": {
+    "score": 78,
+    "proven": true,
+    "data": "b64:GnDVLxXXIJF6wdd6RdcbL9UNdNcV83r2sHoVqhtwSw0VZBWR",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:c95d9164cf5602af9efcb90968de14f0f4c8de2cbd28d10334470ccf92e9c24c"
+  }
+}

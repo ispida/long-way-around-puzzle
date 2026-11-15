@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "id": "lvl17",
+  "name": "Slow lane",
+  "tag": "Mixed",
+  "text": "{mud}, a portal, and {slope|lower} that only go one way. The obvious route is far from the longest.",
+  "map": [
+    "....2~.......T2",
+    ".....~.......T.",
+    "...v.........T.",
+    ".TTvTTTTmm..m..",
+    ".T.v.<<.mm..m.1",
+    ".T.v...~mm.....",
+    ".T<<..TTTTTT.T.",
+    ".T.........T..H",
+    ".T...........T.",
+    "B............T.",
+    ".1............."
+  ],
+  "pieces": {
+    "hedge": 12
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 6,
+  "solution": {
+    "score": 68,
+    "proven": true,
+    "data": "b64:CnDVFRtRPfawM3DVNRtRIPawXXDVRBtRQvawbnDVhRtRjfaw",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-07",
+    "engineVersion": 1,
+    "inputs": "sha256:6d2001ca01ff0583951f03f5195879e3ac868a13ef3a9372e9bac0118920ebf2"
+  }
+}

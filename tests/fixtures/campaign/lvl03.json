@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "lvl03",
+  "name": "Slow going",
+  "tag": "Slow ground",
+  "text": "Each {mud|lower} tile costs 3 steps, so the {animal} goes around it when it can. Block the easy routes and make it wade through: every {mud|lower} tile it crosses saves 3 {units}.",
+  "map": ["...........", "...mmmmm...", "B..mmmmm..H", "...mmmmm...", "...mmmmm...", "..........."],
+  "pieces": {
+    "hedge": 4
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 14,
+  "solution": {
+    "score": 24,
+    "proven": true,
+    "data": "b64:EHDVGhtRONc0J3DV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-05",
+    "engineVersion": 1,
+    "inputs": "sha256:12a641b5048fcea482c6773dc29930c5e85114e0924e9a00220b79c17edadc90"
+  }
+}

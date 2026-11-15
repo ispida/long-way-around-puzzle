@@ -1,0 +1,16 @@
+{
+  "id": "grass",
+  "chars": ["."],
+  "walkable": true,
+  "cost": 1,
+  "accepts": ["hedge"],
+  "nameKey": "grass",
+  "editor": {
+    "group": "terrain",
+    "order": 10
+  },
+  "card": {
+    "title": "Grass",
+    "text": "Costs 1 step. The only tile where you can place a {piece|lower}."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "2026-10-15",
+  "name": "Windy Hill",
+  "tag": "Slopes",
+  "text": "The wind blows down the hill: {slope|lower} only go one way. Use them to send the {animal} on a detour it can't take back.",
+  "map": [
+    "............",
+    ".....~......",
+    ".....^~T....",
+    "....T^.T....",
+    "B..T..<<<<<.",
+    "..T..<<<....",
+    ".......T....",
+    "...........H"
+  ],
+  "pieces": {
+    "hedge": 6
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 14,
+  "solution": {
+    "score": 42,
+    "proven": true,
+    "data": "b64:XHDVRBXXWZF6p9d6onIbLdUN",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:e2a037b69014267ad51ba5785abf767bb13532df9cc3481f9008d49c17217e97"
+  }
+}

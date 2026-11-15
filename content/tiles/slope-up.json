@@ -1,0 +1,25 @@
+{
+  "id": "slope-up",
+  "chars": ["^"],
+  "walkable": true,
+  "cost": 1,
+  "nameKey": "slope",
+  "behaviors": [
+    {
+      "type": "oneWay",
+      "dir": "up"
+    }
+  ],
+  "editor": {
+    "group": "special",
+    "order": 31
+  },
+  "image": {
+    "base": "slope",
+    "rotate": 270
+  },
+  "card": {
+    "title": "{slope}",
+    "text": "One-way: it can only be entered and left in the arrow's direction. You can't place a {piece|lower} on it."
+  }
+}

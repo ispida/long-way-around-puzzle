@@ -1,0 +1,14 @@
+{
+  "id": "tree",
+  "chars": ["T"],
+  "walkable": false,
+  "nameKey": "tree",
+  "editor": {
+    "group": "obstacle",
+    "order": 10
+  },
+  "card": {
+    "title": "Tree",
+    "text": "Nothing gets through a tree, not even the {animal}."
+  }
+}

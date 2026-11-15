@@ -1,0 +1,30 @@
+{
+  "id": "panda",
+  "name": "Panda",
+  "extends": "default",
+  "words": {
+    "animal": "panda",
+    "Animal": "Panda",
+    "food": "bamboo",
+    "pot": "bamboo patch",
+    "mud": "Snow",
+    "burrow": "Portals",
+    "slope": "Ice slides",
+    "Food": "Bamboo",
+    "unit": "shoot",
+    "units": "shoots",
+    "guardians": "red pandas",
+    "Guardians": "Red pandas",
+    "piece": "lantern",
+    "pieces": "lanterns",
+    "Piece": "Lantern",
+    "bonus": "monkeys",
+    "hive": "Monkey troop",
+    "tree": "Cherry tree",
+    "water": "Lotus pond"
+  },
+  "order": 20,
+  "palette": {
+    "boardFrame": "#3f7f6a"
+  }
+}

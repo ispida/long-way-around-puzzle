@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "2026-10-22",
+  "name": "Puddle Jumping",
+  "tag": "Mud",
+  "text": "Last night's rain left {mud|lower} by the {pot}. Each {mud|lower} tile costs the {animal} 3 steps, so steer it right through.",
+  "map": [".......mmm", "...TT.TTT.", "...T......", "......Tm..", ".....T.m.H", ".....T....", "B........."],
+  "pieces": {
+    "hedge": 4
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 11,
+  "solution": {
+    "score": 35,
+    "proven": true,
+    "data": "b64:AHDVKhXXJZF6tNd6",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-20",
+    "engineVersion": 1,
+    "inputs": "sha256:29bea13ffc71fb373a9f18d7f5948a1d9ed2145737499dcc5029b61a2dc6b784"
+  }
+}

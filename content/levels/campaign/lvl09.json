@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "lvl09",
+  "name": "Take the long way",
+  "tag": "Mixed",
+  "text": "A portal to cross and {mud|lower} to wade through. Close the easy ways and make the {animal} take both.",
+  "map": [
+    ".........mm..",
+    "B........T...",
+    ".........T...",
+    ".........TT..",
+    ".1...T...TT..",
+    "..TTT.TT.TTT.",
+    "........TTT.1",
+    "..mmmm...TT..",
+    "..mmmm......H"
+  ],
+  "pieces": {
+    "hedge": 7
+  },
+  "rules": "default",
+  "modifiers": [],
+  "solution": {
+    "score": 49,
+    "proven": true,
+    "data": "b64:M3DVORtRLdfuS3DVURtRfdfufHDV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-06",
+    "engineVersion": 1,
+    "inputs": "sha256:095a8683c199dc1051bacbe3e3ef3401ba538341b0c4c19472e0f939d82f7049"
+  }
+}

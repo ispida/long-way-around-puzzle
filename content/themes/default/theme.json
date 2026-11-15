@@ -1,0 +1,31 @@
+{
+  "id": "default",
+  "name": "Default",
+  "words": {
+    "animal": "bear",
+    "Animal": "Bear",
+    "food": "honey",
+    "pot": "honey pot",
+    "grass": "Grass",
+    "tree": "Tree",
+    "water": "Water",
+    "mud": "Mud",
+    "burrow": "Portals",
+    "hive": "Beehive",
+    "slope": "Slopes",
+    "Food": "Honey",
+    "unit": "jar",
+    "units": "jars",
+    "guardians": "bees",
+    "Guardians": "Bees",
+    "piece": "log",
+    "pieces": "logs",
+    "Piece": "Log",
+    "bonus": "bees"
+  },
+  "palette": {
+    "boardFrame": "#5d8f3e",
+    "path": "#7a3e05"
+  },
+  "tileSize": 128
+}

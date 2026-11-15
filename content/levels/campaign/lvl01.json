@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "lvl01",
+  "name": "First steps",
+  "tag": "Basics",
+  "text": "The {animal} has smelled the {food|lower} and takes the shortest way around the trees. Every step it walks gives the {guardians} time to save one more {unit}. Use your {pieces} to send it the long way around. Never trap it: a trapped {animal} smashes through, eats everything, and nothing is saved.",
+  "map": [".........", "...TT....", "B...T...H", "....T....", "..TTT....", "........."],
+  "pieces": {
+    "hedge": 3
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 12,
+  "solution": {
+    "score": 18,
+    "proven": true,
+    "data": "b64:H3DVHhtRANf2",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-06",
+    "engineVersion": 1,
+    "inputs": "sha256:0fee51ae3e67e52c912f767f6f3f2f55f54fdbedc9472b2a70ba348071500e8f"
+  }
+}

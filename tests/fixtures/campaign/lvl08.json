@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "lvl08",
+  "name": "Sample daily",
+  "tag": "Mixed",
+  "text": "A full-size board that mixes every tile type, the kind of puzzle that would drop each day. How many {units} can the {guardians} save?",
+  "map": [
+    "B.....T......",
+    "......T..m...",
+    "..1...T..m...",
+    "......T..mm..",
+    "......Q......",
+    "......<......",
+    "...mm...T..1.",
+    "...mm...T....",
+    "........T...H"
+  ],
+  "pieces": {
+    "hedge": 10
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 8,
+  "solution": {
+    "score": 41,
+    "proven": true,
+    "data": "b64:FHDVFxtRANfPBnDVJBtRN9fPI3DVMRtRX9fPU3DV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:e8ea61317549172d34331d32027cf96e9756caa6614e4d3219d74d63f7ae124c"
+  }
+}

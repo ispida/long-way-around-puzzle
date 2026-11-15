@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "2026-10-08",
+  "name": "Slippy Slopes",
+  "tag": "2026-10-08",
+  "text": "",
+  "map": [
+    "..T..T..T..",
+    "..>..<..>..",
+    "..T..T..T..",
+    "..<..>..<..",
+    "B.T..T..T.H",
+    "..>..>..<..",
+    "..T..T..T..",
+    "..<..<..>..",
+    "..T..T..T.."
+  ],
+  "pieces": {
+    "hedge": 5
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 16,
+  "solution": {
+    "score": 26,
+    "proven": true,
+    "data": "b64:AnDVKhXXJZF6ztd6gc8b",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-07",
+    "engineVersion": 1,
+    "inputs": "sha256:a5c9c288667919d0c091a9055160e706e098e24e4de8d961f72ab0f4bb3aaa7d"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "2026-10-21",
+  "name": "Leaf Pile",
+  "tag": "Basics",
+  "text": "Heaps of fallen leaves and a few trees. 4 {pieces} are enough to send the {animal} on a proper autumn stroll.",
+  "map": ["B.....TTT", "..TT....H", ".T.......", ".......T.", "......T..", ".TTTTT...", "........."],
+  "pieces": {
+    "hedge": 4
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 9,
+  "solution": {
+    "score": 29,
+    "proven": true,
+    "data": "b64:EnDVAhXXA5F67td6",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-20",
+    "engineVersion": 1,
+    "inputs": "sha256:90fe48d0d7fff1f8b018487067010d31b79603a5830386e933aec1b0a63b0aad"
+  }
+}

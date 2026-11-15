@@ -1,0 +1,29 @@
+{
+  "id": "hive",
+  "chars": ["Q"],
+  "walkable": true,
+  "cost": 1,
+  "nameKey": "hive",
+  "behaviors": [
+    {
+      "type": "bonus",
+      "points": 5
+    }
+  ],
+  "editor": {
+    "group": "special",
+    "order": 20
+  },
+  "card": {
+    "title": "{hive}",
+    "text": "{hive} adds 5 {units}, so the {animal} walks up to 5 extra steps to get around it.",
+    "example": {
+      "map": ["...Q...", "B.....H", ".......", "......."],
+      "hedges": [
+        [3, 1],
+        [3, 2],
+        [3, 3]
+      ]
+    }
+  }
+}

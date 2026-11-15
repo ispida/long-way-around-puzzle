@@ -1,0 +1,23 @@
+{
+  "id": "food",
+  "chars": ["H"],
+  "walkable": true,
+  "cost": 1,
+  "role": "goal",
+  "nameKey": "food",
+  "editor": {
+    "group": "actor",
+    "order": 20
+  },
+  "image": {
+    "base": "grass"
+  },
+  "card": {
+    "title": "Two {food|lower} stashes",
+    "text": "The {animal} goes to the nearest stash.",
+    "example": {
+      "map": ["H......", "...B...", ".......", "......H"],
+      "hedges": []
+    }
+  }
+}

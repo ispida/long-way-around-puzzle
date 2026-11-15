@@ -1,0 +1,14 @@
+{
+  "id": "water",
+  "chars": ["~"],
+  "walkable": false,
+  "nameKey": "water",
+  "editor": {
+    "group": "obstacle",
+    "order": 20
+  },
+  "card": {
+    "title": "Water",
+    "text": "The {animal} won't swim. Water blocks the way like a tree."
+  }
+}

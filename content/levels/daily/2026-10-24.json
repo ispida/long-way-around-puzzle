@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "2026-10-24",
+  "name": "Pumpkin Patch",
+  "tag": "Mud and hives",
+  "text": "Soft ground between the pumpkins and a {hive|lower} in the corner. Passing the {bonus} counts +5, so the {animal} walks up to 5 extra steps to avoid them. Saturday puzzle: take your time.",
+  "map": [
+    "...........Q",
+    ".m.........H",
+    ".mTT.TTTT~~.",
+    "..mmm....~~.",
+    "B.mmm......T",
+    "..TTTTT...T.",
+    "............",
+    "............",
+    "............"
+  ],
+  "pieces": {
+    "hedge": 6
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 16,
+  "solution": {
+    "score": 55,
+    "proven": true,
+    "data": "b64:C3DVGxXXMZF6x9d6WlMbLNUN",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-20",
+    "engineVersion": 1,
+    "inputs": "sha256:42f5ce529e01eb7985ec9bd439d40b20425f7998e10c29710acf8fea8874e03c"
+  }
+}

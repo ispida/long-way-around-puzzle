@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "2026-10-09",
+  "name": "Middle of the lake",
+  "tag": "Daily",
+  "text": "",
+  "map": [
+    "~~~~~~~~~~~~~~~",
+    "~......~......~",
+    "~..~......~...~",
+    "~....~.~....~.~",
+    "~.~...H.B~....~",
+    "~..~...~......~",
+    "~.....~....~..~",
+    "~..~..........~",
+    "~~~~~~~~~~~~~~~"
+  ],
+  "pieces": {
+    "hedge": 5
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 2,
+  "solution": {
+    "score": 28,
+    "proven": true,
+    "data": "b64:PnDVTRXXVpF6ptd6hO4b",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:1ceb8e2386b94c514fa7be082501923786bbc59aebda8a42aff2612ce9a9bac2"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "2026-01-05",
+  "name": "Serpentine",
+  "tag": "Corridors",
+  "text": "The trees already form a zigzag. Turning open ground into narrow corridors with your {pieces} usually beats placing them in a straight line.",
+  "map": [
+    "B..........",
+    "...........",
+    "TTTTTTTT...",
+    "...........",
+    "...........",
+    "...TTTTTTTT",
+    "...........",
+    "..........H"
+  ],
+  "pieces": {
+    "hedge": 6
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 29,
+  "solution": {
+    "score": 41,
+    "proven": true,
+    "data": "b64:GnDVHRtRBNcVMnDVIBtRNdcV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-05",
+    "engineVersion": 1,
+    "inputs": "sha256:564f545c86660779a85092b97d9d970b1b9d1fd77e340f3ea3b93427e7dff469"
+  }
+}

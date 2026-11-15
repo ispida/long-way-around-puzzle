@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "lvl13",
+  "name": "Two pots, two portals",
+  "tag": "Mixed",
+  "text": "Two {pot}s and two pairs of portals. Every portal is a shortcut to somewhere, so watch where each one leads.",
+  "map": [
+    ".......T....~",
+    "...1..2TT....",
+    "............~",
+    "TT.TTTTTTT..~",
+    "......T......",
+    "......T......",
+    "......T......",
+    ".T2TT1T.TT...",
+    "B...H.......H"
+  ],
+  "pieces": {
+    "hedge": 10
+  },
+  "rules": "default",
+  "modifiers": [],
+  "solution": {
+    "score": 41,
+    "proven": true,
+    "data": "b64:DHDVERtRP/Y0X3DVQRtRS/Y0Q3DVVxtRcfY0dnDV",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-07",
+    "engineVersion": 1,
+    "inputs": "sha256:5cf33b3c67380cf4148c43e41d083542afb6f10dd86e5cded4d6edf9d70ac5cf"
+  }
+}

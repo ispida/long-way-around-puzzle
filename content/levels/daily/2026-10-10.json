@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "2026-10-10",
+  "name": "Radiant",
+  "tag": "Daily",
+  "text": "",
+  "map": [
+    "T...T...T",
+    ".T.......",
+    "..T.T.T..",
+    ".........",
+    ".T.BTH.T.",
+    ".......T.",
+    "..T.T.T..",
+    "...T.....",
+    "T...T...T"
+  ],
+  "pieces": {
+    "hedge": 4
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 4,
+  "solution": {
+    "score": 22,
+    "proven": true,
+    "data": "b64:FHDVLRXXNJF6x9d6",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:7ccaaebfce5e3a3ac8017aecfda29df86ebefb003dc8783b75081d6a8017650e"
+  }
+}

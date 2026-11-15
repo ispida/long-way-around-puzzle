@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "id": "2026-10-18",
+  "name": "Mushroom Hunt",
+  "tag": "Mixed",
+  "text": "A long Sunday walk through the woods: {mud|lower}, {slope|lower}, a pair of {burrow|lower} and a {hive|lower} in the far corner.",
+  "map": [
+    "B......m.~.....",
+    ".v....mmm~.....",
+    ".v....mmm......",
+    ".v..TTmmm.....H",
+    ".1....TTTTT.TT.",
+    ".v....T......T.",
+    ".T....<<<....T.",
+    ".T.........TTT.",
+    ".T..........T1.",
+    ".T.............",
+    "..............Q"
+  ],
+  "pieces": {
+    "hedge": 11
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 12,
+  "solution": {
+    "score": 65,
+    "proven": true,
+    "data": "b64:GXDVFxXXNJF61dd60c8bWtUNLdcVr3r2jnr2SBtwQQ0V",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-08",
+    "engineVersion": 1,
+    "inputs": "sha256:0ba7d6104230775058b039282758c37257c180b72d035bb5cc83d601bfe25a84"
+  }
+}

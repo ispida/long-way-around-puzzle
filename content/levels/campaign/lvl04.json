@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "lvl04",
+  "name": "Wading",
+  "tag": "Slow ground",
+  "text": "Each {mud|lower} tile costs 3 steps, so the {animal} goes around it when it can. Close the dry lanes and it has to wade: every {mud|lower} tile it crosses saves 3 {units}.",
+  "map": [
+    "...........",
+    ".TTTTTTTTT.",
+    "...........",
+    "BTTTTTTTTT.",
+    "..mmmmmmm.H",
+    ".TTTTTTTTT.",
+    "...........",
+    "..........."
+  ],
+  "pieces": {
+    "hedge": 2
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 13,
+  "solution": {
+    "score": 25,
+    "proven": true,
+    "data": "b64:O3DVTxtR",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-06",
+    "engineVersion": 1,
+    "inputs": "sha256:935b1193f4a3df854308aec2557e25dc517755275dcd7b0a438fb1e1fc7b5875"
+  }
+}

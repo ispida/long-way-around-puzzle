@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "2026-10-27",
+  "name": "Corn Maze",
+  "tag": "Maze",
+  "text": "Rows of trees make a maze. 5 {pieces} to close the shortcuts.",
+  "map": [
+    "..........",
+    "......T...",
+    "...T.TTTTH",
+    "..........",
+    "....TTTT..",
+    ".TTTT.....",
+    "B...T.T.T.",
+    ".T..TTTTT.",
+    ".T........"
+  ],
+  "pieces": {
+    "hedge": 5
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 13,
+  "solution": {
+    "score": 41,
+    "proven": true,
+    "data": "b64:FXDVGBXXNZF60dd6J7Ab",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-20",
+    "engineVersion": 1,
+    "inputs": "sha256:74d2c209459393dccc03379e4216161e5bd96d8e585f9142b4073f32fbdad988"
+  }
+}

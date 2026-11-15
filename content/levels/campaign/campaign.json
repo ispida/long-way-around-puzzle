@@ -1,0 +1,26 @@
+{
+  "levels": [
+    "lvl01",
+    "lvl02",
+    "lvl03",
+    "lvl04",
+    "lvl05",
+    "lvl06",
+    "lvl07",
+    "lvl08",
+    "lvl09",
+    "lvl10",
+    "lvl11",
+    "lvl12",
+    "lvl13",
+    "lvl14",
+    "lvl15",
+    "lvl16",
+    "lvl17",
+    "lvl18",
+    "lvl19",
+    "lvl20"
+  ],
+  "unlock": "sequential",
+  "version": 2
+}

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "lvl05",
+  "name": "Shortcut",
+  "tag": "Portals",
+  "text": "Two portals are linked: stepping from one to the other costs the {animal} just 1 step. You can't place a {piece|lower} on a portal, but you can surround one.",
+  "map": [
+    "...T...T...",
+    ".1.T...T...",
+    "...T...T...",
+    "B......T..H",
+    "...T......1",
+    "...T...T...",
+    "...T...T...",
+    "..........."
+  ],
+  "pieces": {
+    "hedge": 5
+  },
+  "rules": "default",
+  "modifiers": [],
+  "startScore": 5,
+  "solution": {
+    "score": 20,
+    "proven": true,
+    "data": "b64:DXDVFRtROddyKXDVQhtR",
+    "method": "cp-sat",
+    "solvedAt": "2026-10-06",
+    "engineVersion": 1,
+    "inputs": "sha256:2a8a59eba0bcb20f715d672ed15d0aaa3ad620836f776578e6125e6679d5c7bc"
+  }
+}
